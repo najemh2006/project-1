@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Salma's Invitation">
+    <meta property="og:description" content="You are invited!">
+    <meta property="og:image" content="img/background.jpg">
+    <meta name="author" content="Najem Haddadin">
+    <title>project-1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="Memories">
+        <h2 class="form-title">Memories</h2>
+
+        <form id="questionsForm">
+            
+            <div class="step active-step">
+                <div class="question-group">
+                    <label>1. Your favorite snack is:</label>
+                    
+                    <div class="snack-images">
+                        <img src="img/1.jpg" alt="Snack 1">
+                        <i class="fa-solid fa-plus plus-icon"></i>
+                        <img src="img/2.jpg" alt="Snack 2">
+                    </div>
+
+                    <div class="custom-radio">
+                        <label>
+                            <input type="radio" name="q1" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="next-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="question-group">
+                    <label>2. Your first GPA is <b>3.69</b>:</label>
+                    <div class="custom-radio">
+                        <label>
+                            <input type="radio" name="q2" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="submit-btn">Submit ✨</button>
+                </div>
+            </div>
+
+        </form>
+
+        <div id="thankYouMessage" class="hidden-message message-box">
+            <div class="custom-letter">
+                <p dir="rtl">
+                    حبيت اعمل هاي الشغلة حتى اكسر الجمود، ما بحب اكون مزعل حدا حتى لو كنت متسرع بحكمي او قراري طولت كثير، فبمبادرة لإصلاح ذات البين عملت هذا الموقع لدعوتك لشرب كاسة قهوة بـ fratelli baristi (FB)
+                </p>
+                <p>
+                    "I wanted to do this to break the ice. I don't like having anyone upset with me, even if I was too quick to judge or make a decision. I know it took me a long time, but as an initiative to clear the air, I built this website to invite you for a cup of coffee at Fratelli Baristi (FB)."
+                </p>
+                <p class="signature">
+                    With all due respect,<br>
+                    Najem
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+/* =========================================
+   Global Styles & Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: "Changa", sans-serif;
+    background-color: #D7CFC8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   Glassmorphism Window (Refined Shadows & Borders)
+   ========================================= */
+#Memories {
+    background-color: rgba(164, 120, 100, 0.55); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 700px; /* تم تكبير العرض قليلاً ليتناسب مع الرسالة */
+    border-radius: 24px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 60px 60px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15); 
+}
+
+/* =========================================
+   Typography & Layout
+   ========================================= */
+.question-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-group label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left; 
+}
+
+/* =========================================
+   Inputs (Text)
+   ========================================= */
+.question-group input[type="text"] {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.question-group input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.question-group input[type="text"]:focus {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   Custom Radio Buttons
+   ========================================= */
+.custom-radio {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.custom-radio label {
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.custom-radio input[type="radio"] {
+    display: none; 
+}
+
+.custom-radio span {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-radio label:hover span {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-radio input[type="radio"]:checked + span {
+    background-color: #fff;
+    color: #A47864;
+    font-weight: 700;
+    border-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03); 
+}
+
+/* =========================================
+   Images Styling
+   ========================================= */
+.snack-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 5px 0;
+}
+
+.single-image img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 20px !important;
+}
+
+.snack-images img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.snack-images img:hover {
+    transform: scale(1.05);
+}
+
+.plus-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   Navigation Buttons
+   ========================================= */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.next-btn, .prev-btn, .submit-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.next-btn, .submit-btn {
+    background-color: #fff;
+    color: #A47864;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.prev-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.next-btn:hover, .submit-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.prev-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    flex: 2;
+}
+
+/* =========================================
+   Final Letter Message Styling
+   ========================================= */
+.message-box {
+    padding: 10px;
+}
+
+.message-box h3 {
+    text-align: left; 
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.custom-letter {
+    text-align: left; /* إذا كانت رسالتك بالعربي بالكامل يمكنك تحويلها إلى right */
+    line-height: 1.8; 
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.custom-letter p {
+    margin-bottom: 15px; 
+}
+
+.signature {
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* =========================================
+   Animations & States
+   ========================================= */
+.step {
+    display: none;
+    animation: fadeInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.step.active-step {
+    display: block;
+}
+
+.hidden-message {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
